@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>다음 영화 테이블</title>
+    </head>
+    <style>
+    table, th, td {
+  border: 1px solid white;
+  border-collapse: collapse;
+}
+ th, td {
+  border-color: #96D4D4;
+}
+th {
+  background-color: #96D4D4;
+}
+    </style>
+    <body>
+        <table>
+            <tr>
+                <th>순위</th>
+                <th>제목</th>
+            </tr>
+        {% for value in values %}
+            <tr>
+                <td>{{ value[0] }}</td>
+                <td>{{ value[1] }}</td>
+            </tr>
+        {% endfor %}
+        </table>
+    </body>
+</html>
